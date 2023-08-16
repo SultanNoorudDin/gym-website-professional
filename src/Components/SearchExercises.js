@@ -88,7 +88,7 @@ const SearchExercises = () => {
         width: "100%",
         p: "20px"
       }}>
-        <HorizontalScroll data={bodyParts} />
+        <HorizontalScroll data={bodyParts} bodyParts={bodyParts} setBodyParts={setBodyParts} isBodyParts/>
       </Box>
     </Stack>
   )

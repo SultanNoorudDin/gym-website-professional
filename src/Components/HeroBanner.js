@@ -10,6 +10,8 @@ const HeroBanner = () => {
         }
         }
             position={"relative"} p="20px ">
+                <div>
+
 
             {/*  logo brand name*/}
             <Typography color={"#FF2625"} fontWeight={'600'} fontSize={"26px"}>
@@ -41,7 +43,11 @@ const HeroBanner = () => {
                 fontSize={'200px'}>
                 Exercise
             </Typography>
-            <img src={HeroImg} alt="banner" className='HeroBanner' />
+                </div>
+                <div>
+
+            <img src={HeroImg} alt="banner" className='HeroBanner'  />
+                </div>
         </Box >
     )
 }
