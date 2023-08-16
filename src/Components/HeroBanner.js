@@ -18,18 +18,18 @@ const HeroBanner = () => {
 
             {/* 2nd typo */}
             <Typography fontWeight={'700'}
-                sx={{ fontSize: { lg: "44px", xs: "40px" } }}>
+                sx={{ fontSize: { lg: "44px", xs: "40px" }, mb:"23px", mt :"30px" }}>
                 Sweat,Smile <br />
                 & Repeat
             </Typography>
 
             {/* 3rd typo */}
-            <Typography fontSize={"24px"} lineHeight={"35px"} mb={3}>
+            <Typography fontSize={"24px"} lineHeight={"35px"} mb={4}>
                 Check out the most effective exercises
             </Typography>
 
             {/* button of explore exercise */}
-            <Button variant='contained' color='error' href='#exercises'>Explore Exercise</Button>
+            <Button variant='contained' color='error' href='#exercises' sx={{backgroundColor:'#ff2625', padding:'15px'}}>Explore Exercise</Button>
             <Typography
                 fontWeight={600}
                 color={'#FF2625'}
