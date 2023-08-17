@@ -142,3 +142,7 @@ body {
     width: 280px;
   }
 }
+
+.row{
+  display: flex;
+}

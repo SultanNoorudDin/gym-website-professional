@@ -5,6 +5,8 @@ import Logo from "../assets/images/Logo.png"
 
 const Navbar = () => {
   return (
+    // spanning to make it inline element 
+    
     <Stack direction={'row'} justifyContent={'space-around'}
       sx={{
         gap: { sm: '122px', xs: '40px' },
@@ -39,6 +41,7 @@ const Navbar = () => {
         </a>
       </Stack>
     </Stack>
+    
   )
 }
 
