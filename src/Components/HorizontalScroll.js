@@ -1,10 +1,10 @@
-import React,{useContext} from 'react'
-import { Box,Typography } from '@mui/material';
-import BodyPart from './BodyPart';
+import React, { useContext } from 'react'
 import { ScrollMenu, VisibilityContext } from "react-horizontal-scrolling-menu";
+import { Box, Typography } from '@mui/material';
+import BodyPart from './BodyPart';
+import ExerciseCard from "./ExerciseCard"
 import RightArrowIcon from "../assets/icons/right-arrow.png"
 import LeftArrowIcon from "../assets/icons/left-arrow.png"
-import ExerciseCard from "./ExerciseCard"
 
 
 const LeftArrow = () => {
@@ -22,29 +22,29 @@ const RightArrow = () => {
 
     return (
         <Typography onClick={() => scrollNext()} className="left-arrow">
-            <img src={RightArrowIcon} alt="right-arrow" />
+            <img src={RightArrowIcon} alt="right-arrow" />   {/* left arrow me b
+             right arrow ka alt dala hua hai */}
         </Typography>
     );
 };
 
-const HorizontalScroll = ({ data, bodyPart, setBodyPart,isBodyParts }) => {
-    return (
-        <ScrollMenu leftArrow = {LeftArrow} rightArrow={RightArrow}>
+const HorizontalScroll = ({ data, bodyParts, setBodyPart, bodyPart }) => (
+
+        <ScrollMenu LeftArrow={LeftArrow} RightArrow={RightArrow}>
             {data.map((item) => (
                 <Box
                     key={item.id || item}
-                    title={item.id || item}
                     itemId={item.id || item}
+                    title={item.id || item}
                     m="0 40px"
                 >
-                    { isBodyParts ? <BodyPart item={item} bodyPart={bodyPart}
-                     setBodyPart={setBodyPart} /> : <ExerciseCard item={item}/>}
+                    {bodyParts ? <BodyPart item={item} setBodypart={setBodyPart} bodyPart={bodyPart}/> : <ExerciseCard exercise={item} />}
 
                 </Box>
             )
             )}
         </ScrollMenu>
     )
-}
+
 
 export default HorizontalScroll
