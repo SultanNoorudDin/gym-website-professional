@@ -38,6 +38,7 @@ const ExerciseDetail = () => {
     }
     fetchExerciseData();
   }, [id])
+  
 
   if (!exerciseDetail) return <div>No data</div>
   return (
